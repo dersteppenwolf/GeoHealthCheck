@@ -10,7 +10,9 @@
   "tags": {
     "ows": "ows",
     "tiling": "tiling",
-    "pdok": "pdok"
+    "pdok": "pdok",
+    "ogc": "ogc",
+    "esri": "esri"
   },
   "resources": {
     "PDOK BAG WMS": {
@@ -84,7 +86,28 @@
         "tiling",
         "pdok"
       ]
+    },
+    "PYGEOAPI FEATURES": {
+      "owner": "admin",
+      "resource_type": "OSGeo:WFS3",
+      "active": true,
+      "title": "pygeoapi - master",
+      "url": "https://demo.pygeoapi.io/master",
+      "tags": [
+        "ogc"
+      ]
+    },
+    "ESRI FEATURESERVER": {
+      "owner": "admin",
+      "resource_type": "ESRI:FS",
+      "active": true,
+      "title": "ESRI ArcGIS FeatureServer (FS)",
+      "url": "https://sampleserver3.arcgisonline.com/ArcGIS/rest/services/Fire/Sheep/FeatureServer",
+      "tags": [
+        "esri"
+      ]
     }
+
   },
   "probe_vars": {
     "PDOK BAG WMS - GetCaps": {
@@ -200,7 +223,27 @@
         "y": "0",
         "extension" : "png"
       }
+    },
+    "PYGEOAPI - Drilldown": {
+      "resource": "PYGEOAPI FEATURES",
+      "probe_class": "GeoHealthCheck.plugins.probe.wfs3.WFS3Drilldown",
+      "parameters": {
+        "drilldown_level": "full"
+      }
+    },
+    "PYGEOAPI - OpenAPI": {
+      "resource": "PYGEOAPI FEATURES",
+      "probe_class": "GeoHealthCheck.plugins.probe.wfs3.WFS3OpenAPIValidator",
+      "parameters": {}
+    },
+    "ESRIFS - Drilldown": {
+      "resource": "ESRI FEATURESERVER",
+      "probe_class": "GeoHealthCheck.plugins.probe.esrifs.ESRIFSDrilldown",
+      "parameters": {
+        "drilldown_level": "full"
+      }
     }
+
   },
   "check_vars": {
     "PDOK BAG WMS - GetCaps - XML Parse": {
