@@ -44,6 +44,7 @@ ENV LC_ALL="en_US.UTF-8" \
 	GHC_SMTP_USERNAME=None \
 	GHC_SMTP_PASSWORD=None \
 	GHC_METADATA_CACHE_SECS=900 \
+	GHC_VERIFY_SSL=False \
     \
 # WSGI server settings, assumed is gunicorn  \
 HOST=0.0.0.0 \
