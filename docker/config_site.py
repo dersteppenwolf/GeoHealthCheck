@@ -59,6 +59,7 @@ GHC_RUNNER_IN_WEBAPP = str2bool(os.environ['GHC_RUNNER_IN_WEBAPP'])
 GHC_REQUIRE_WEBAPP_AUTH = str2bool(os.environ['GHC_REQUIRE_WEBAPP_AUTH'])
 GHC_LOG_LEVEL = int(os.environ['GHC_LOG_LEVEL'])
 GHC_LOG_FORMAT = os.environ['GHC_LOG_FORMAT']
+GHC_VERIFY_SSL = str2bool(os.environ['GHC_VERIFY_SSL'])
 
 # Optional ENV set for GHC_PLUGINS (internal/core Plugins)
 # if not set default from config_main.py applies

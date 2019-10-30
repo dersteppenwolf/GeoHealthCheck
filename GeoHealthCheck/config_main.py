@@ -53,6 +53,7 @@ GHC_REQUIRE_WEBAPP_AUTH = False
 # 10=DEBUG 20=INFO 30=WARN(ING) 40=ERROR 50=FATAL/CRITICAL
 GHC_LOG_LEVEL = 30
 GHC_LOG_FORMAT = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+GHC_VERIFY_SSL = False
 
 # Some GetCaps docs are huge. This allows
 # caching them for N seconds. Set to -1 to
