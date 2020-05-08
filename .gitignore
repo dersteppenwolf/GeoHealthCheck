@@ -59,3 +59,6 @@ GeoHealthCheck/static/docs
 GeoHealthCheck/static/lib
 GeoHealthCheck.wsgi
 GeoHealthCheck.conf
+
+# Mac
+.DS_Store
